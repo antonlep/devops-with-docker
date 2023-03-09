@@ -1,0 +1,6 @@
+docker pull devopsdockeruh/simple-web-service:ubuntu
+docker pull devopsdockeruh/simple-web-service:alpine
+docker images //ubuntu 83MB, alpine 15.7MB
+docker run -d devopsdockeruh/simple-web-service:alpine
+docker exec -it d6 sh
+tail -f ./text.log
