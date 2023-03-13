@@ -1,0 +1,6 @@
+Commands used:
+fly launch
+flyctl deploy
+
+Link to the app:
+https://misty-dust-6815.fly.dev/
