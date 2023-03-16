@@ -1,0 +1,6 @@
+Backend dockerfile:
+- port number removed from url for cors check
+Frontend dockerfile:
+- no changes
+Nginx conf file:
+- route for /api/ping added
