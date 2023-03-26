@@ -1,0 +1,16 @@
+version: "3.8" # Version 3.8 is quite new and should work
+
+services:
+  express-app:
+    image: antonleppa/express-app
+    ports:
+      - 3000:8080
+    container_name: express-app
+  watchtower:
+    image: containrrr/watchtower
+    environment:
+      -  WATCHTOWER_POLL_INTERVAL=60 # Poll every 60 seconds
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    container_name: watchtower
+    command: express-app
