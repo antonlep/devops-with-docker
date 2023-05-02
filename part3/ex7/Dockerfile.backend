@@ -1,0 +1,17 @@
+FROM alpine:3.17
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+EXPOSE 8080
+
+COPY --from=golang:1.13-alpine /usr/local/go/ /usr/local/go/
+
+ENV PATH="/usr/local/go/bin:${PATH}"
+
+RUN go build && adduser -D appuser
+
+USER appuser
+
+CMD ["./server"]

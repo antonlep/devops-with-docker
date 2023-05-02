@@ -1,0 +1,7 @@
+Image size at the beginning:
+Frontend 1.26GB
+Backend 1.07GB
+
+Imaze size at the end:
+Frontend 309MB
+Backend 491MB
